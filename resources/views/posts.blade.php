@@ -5,31 +5,35 @@
 </head>
 <body>
 
-<h1>This is a Blob</h1>
+<h1>This is a Post_views</h1>
+<div>
+<strong>Title</strong>
+<strong>content</strong>
+<strong>tag</strong>
+</div>
+<div>
 <?php 
-$posts = array(
-    array(
-        'id' => 1,
-        'title' => 'post1',
-        'content' => 'content2',
-    ),
-    array(
-        'id' => 2,
-        'title' => 'post12',
-        'content' => 'content2',
-    ),
-    array(
-        'id' => 1,
-        'title' => 'post1',
-        'content' => 'content2',
-    ),
-);
+foreach ($posts as $post) {
+    echo $post->title."\n";
+}
 ?>
-@foreach ($posts as $key => $post)
-    <p>This is post {{ $post['id'] }}</p>
-    <p>This is title {{ $post['title'] }}</p>
-    <p>This is content {{ $post['content'] }}</p>
-@endforeach
+</div>
+<div>
+<?php
+foreach ($posts as $post) {
+    echo $post->content."\n";
+}
+?>
+</div>
+<div>
+<?php
+foreach ($posts as $post) {
+    echo $post->tag."\n";
+}
+?>
+</div>
+
+
 
 </body>
 </html>

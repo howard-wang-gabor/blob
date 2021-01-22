@@ -11,20 +11,3 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
-$posts = array(
-    array(
-        'id' => 1,
-        'title' => 'post1',
-        'content' => 'content2',
-    ),
-    array(
-        'id' => 2,
-        'title' => 'post12',
-        'content' => 'content2',
-    ),
-    array(
-        'id' => 1,
-        'title' => 'post1',
-        'content' => 'content2',
-    ),
-);
