@@ -14,21 +14,21 @@
 <div>
 <?php 
 foreach ($posts as $post) {
-    echo $post->title."\n";
+    // echo $post->title."\n";
 }
 ?>
 </div>
 <div>
 <?php
 foreach ($posts as $post) {
-    echo $post->content."\n";
+    // echo $post->content."\n";
 }
 ?>
 </div>
 <div>
 <?php
 foreach ($posts as $post) {
-    echo $post->tag."\n";
+    // echo $post->tag."\n";
 }
 ?>
 </div>
