@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 
-
-class PostController extends Controller
+class show_PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,20 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        // $posts = DB::table('posts')->get();
-        // return view('posts', ['posts' => $posts]);
-        // foreach ($posts as $post) {
-        //     echo $post->title;
-        // }
-            $posts = Post::all();
-
-            foreach ($posts as $post) {
-                echo $post->id."\n";
-                echo $post->title."\n";
-                echo $post->content."\n";
-                echo $post->tag."\n";
-            }
-        
+        //
     }
 
     /**
@@ -61,14 +45,15 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-
     {
-        
+        $posts = Post::find($id);
+        // return response($posts, 200);
+        return view('posts', ['posts'=>$posts, 'id'=>$posts->id, 'title'=>$posts->title, 'content'=>$posts->content, 'tag'=>$posts->tag]);
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
+     *  
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

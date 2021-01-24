@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\show_PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,10 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 // Route::get('/posts', function () {
 //     return view('posts');
 // });
 Route::resource('posts', PostController::class);
+Route::resource('show_posts', show_PostController::class);
